@@ -54,14 +54,7 @@ provider:
         - "Fn::GetAtt": [ NotesTable, Arn ]
 
 functions:
-  create:
-    handler: src/create.handler
-    events:
-      - http:
-          path: notes
-          method: post
-          cors: true
-          authorizer: aws_iam
+  - ${file(function-defs/create-func.yml)}
 
 resources:
   # API Gateway Errors

@@ -1,0 +1,8 @@
+create:
+  handler: src/create.handler
+  events:
+    - http:
+        path: notes
+        method: post
+        cors: true
+        authorizer: aws_iam
