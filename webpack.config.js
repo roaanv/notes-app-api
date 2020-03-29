@@ -1,8 +1,8 @@
 const path = require('path');
 const slsw = require('serverless-webpack');
 const isLocal = slsw.lib.webpack.isLocal;
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const DashboardPlugin = require('webpack-dashboard/plugin');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+// const DashboardPlugin = require('webpack-dashboard/plugin');
 
 module.exports = {
   mode: isLocal ? 'development' : 'production',
