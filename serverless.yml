@@ -7,7 +7,7 @@ package:
   individually: true
 
 plugins:
-  - serverless-bundle # Package our functions with Webpack
+  - serverless-webpack
   - serverless-offline
   - serverless-dotenv-plugin # Load .env as environment variables
 
@@ -17,6 +17,10 @@ custom:
   stage: ${opt:stage, self:provider.stage}
   # Set the table name here so we can use it while testing locally
   tableName: ${self:custom.stage}-notes
+  webpack:
+      webpackConfig: 'webpack.config.js'
+      packager: 'npm'
+      includeModules: true
 
 provider:
   name: aws
@@ -49,13 +53,15 @@ provider:
       Resource:
         - "Fn::GetAtt": [ NotesTable, Arn ]
 
-#functions:
-#  hello:
-#    handler: handler.hello
-#    events:
-#      - http:
-#          path: hello
-#          method: get
+functions:
+  create:
+    handler: src/create.handler
+    events:
+      - http:
+          path: notes
+          method: post
+          cors: true
+          authorizer: aws_iam
 
 resources:
   # API Gateway Errors

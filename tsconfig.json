@@ -1,16 +1,15 @@
 {
   "compilerOptions": {
     "module": "commonjs",
-    "target": "es2017",
+    "preserveConstEnums": true,
+    "strictNullChecks": true,
     "sourceMap": true,
+    "allowJs": true,
+    "target": "es2017",
+    "outDir": ".build",
     "moduleResolution": "node",
-    "esModuleInterop": true,
-    "types": [ "node" ],
-    "outDir": "./out",
-    "baseUrl": "./",
-    "typeRoots": [
-      "node_modules/@types"
-    ]
+    "lib": ["es2015"],
+    "rootDir": "./"
   },
   "include": ["./src/**/*"]
 }
