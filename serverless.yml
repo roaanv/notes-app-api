@@ -21,6 +21,12 @@ custom:
       webpackConfig: 'webpack.config.js'
       packager: 'npm'
       includeModules: true
+  dotenv:
+      # Without this, the serverless-dot-env-plugin will add all the environment variables
+      # This means variables will be added twice. Once by the plugin and the other
+      # by the "environment" section below
+      include:
+        -
 
 provider:
   name: aws
