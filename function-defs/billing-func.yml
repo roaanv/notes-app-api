@@ -1,0 +1,8 @@
+update:
+  handler: src/update.handler
+  events:
+    - http:
+        path: notes/{id}
+        method: put
+        cors: true
+        authorizer: aws_iam

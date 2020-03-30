@@ -1,0 +1,8 @@
+get:
+  handler: src/get.handler
+  events:
+    - http:
+        path: notes/{id}
+        method: get
+        cors: true
+        authorizer: aws_iam
