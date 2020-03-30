@@ -11,3 +11,8 @@ raws cognito-idp admin-confirm-sign-up --region ap-southeast-2 --user-pool-id ap
 
 # Checking bundle size
 * https://developers.google.com/web/fundamentals/performance/webpack/monitor-and-analyze
+
+# Source
+* https://github.com/AnomalyInnovations/serverless-stack-demo-api
+* https://github.com/AnomalyInnovations/serverless-stack-com
+

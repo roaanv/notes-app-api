@@ -1,8 +1,8 @@
-list:
-  handler: src/list.handler
+update:
+  handler: src/update.handler
   events:
     - http:
-        path: notes
-        method: get
+        path: notes/{id}
+        method: put
         cors: true
         authorizer: aws_iam

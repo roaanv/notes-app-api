@@ -1,8 +1,8 @@
-update:
-  handler: src/update.handler
+billing:
+  handler: src/billing.handler
   events:
     - http:
-        path: notes/{id}
-        method: put
+        path: billing
+        method: post
         cors: true
         authorizer: aws_iam

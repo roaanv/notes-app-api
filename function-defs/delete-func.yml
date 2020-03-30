@@ -1,8 +1,8 @@
-update:
-  handler: src/update.handler
+delete:
+  handler: src/delete.handler
   events:
     - http:
         path: notes/{id}
-        method: put
+        method: delete
         cors: true
         authorizer: aws_iam

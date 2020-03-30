@@ -55,6 +55,11 @@ provider:
 
 functions:
   - ${file(function-defs/create-func.yml)}
+  - ${file(function-defs/get-func.yml)}
+  - ${file(function-defs/list-func.yml)}
+  - ${file(function-defs/update-func.yml)}
+  - ${file(function-defs/delete-func.yml)}
+  - ${file(function-defs/billing-func.yml)}
 
 resources:
   # API Gateway Errors
