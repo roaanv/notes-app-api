@@ -76,7 +76,7 @@ resources:
   - ${file(aws-resources/s3-bucket.yml)}
   # Cognito
   - ${file(aws-resources/cognito-user-pool.yml)}
-  #- ${file(aws-resources/cognito-identity-pool.yml)}
+  - ${file(aws-resources/cognito-identity-pool.yml)}
   # API Gateway
   - ${file(aws-resources/api-gateway-errors.yml)}
 

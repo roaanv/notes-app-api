@@ -53,3 +53,6 @@ env.yml
 
 # Output files
 report*.json
+
+# Dot files
+.*

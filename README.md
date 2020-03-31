@@ -1,4 +1,6 @@
-https://serverless-stack.com/
+* https://serverless-stack.com/
+* [CLI to test using Cognito User Pools](https://github.com/AnomalyInnovations/aws-api-gateway-cli-test)
+  * Install npm i -D aws-api-gateway-cli-test
 
 # Serverless Node.js Starter
 
